@@ -7,6 +7,13 @@
 #
 #   Plot drawing function: hist.global.active.power() in plot.functions.R
 #
+#   dependencies:
+#       plot.functions.R - must be in the same folder as plot1.R
+#
+#   usage:
+#       setwd(<location of plot1.R>)
+#       source('plot1.R')
+#
 ###############################################################################
 
 source('plot.functions.R')

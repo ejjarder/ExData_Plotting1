@@ -5,6 +5,9 @@
 #
 #   Contains the functions that actually generate the plots.
 #
+#   dependencies:
+#       plot.utils.R - must be in the same folder as plot.functions.R
+#
 ###############################################################################
 
 source('plot.utils.R')
