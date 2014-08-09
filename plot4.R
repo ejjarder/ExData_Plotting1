@@ -14,6 +14,13 @@
 #
 #                          All functions are defined in plot.functions.R
 #
+#   dependencies:
+#       plot.functions.R - must be in the same folder as plot4.R
+#
+#   usage:
+#       setwd(<location of plot4.R>)
+#       source('plot4.R')
+#
 ###############################################################################
 
 source('plot.functions.R')
