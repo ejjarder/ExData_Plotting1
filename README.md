@@ -25,15 +25,21 @@ Contains functions that actually generate the plots. The developer decided to pu
 Output: [plot1.png](plot1.png)
 Plot Function: `hist.global.active.power()` in [plot.functions.R](plot.functions.R)
 
+The `hist.global.active.power()` uses the `hist()` function on the Global Active Power data to generate the required plot.
+
 ### [plot2.R](plot2.R)
 
 Output: [plot2.png](plot2.png)
 Plot Function: `plot.active.power.to.date.time()` in [plot.functions.R](plot.functions.R)
 
+The `plot.active.power.to.date.time()` uses the `plot()` function on the Global Active Power data against the Date-Time to generate the required plot. The `plot.active.power.to.date.time()` has a second optional parameter that controls the Global Active Power label. This is used when generating [plot4.png](plot4.png), which uses the same plot.
+
 ### [plot3.R](plot3.R)
 
 Output: [plot3.png](plot3.png)
 Plot Function: `plot.sub.metering.to.date.time()` in [plot.functions.R](plot.functions.R)
+
+The `plot.sub.metering.to.date.time()` first uses the `plot()` function on the Sub Metering 1 data against the Date-Time to generate the required plot, but passes the `type = 'n'` parameter to generate an empty plot. It then calls the `line()` function on each of the Sub Metering data while setting the appropriate color. It then generates a legend on the top right of the plot using the `legend()` function.
 
 ### [plot4.R](plot4.R)
  
@@ -46,6 +52,8 @@ The function `multi.plot()` in turn calls the following functions also found in 
 * `plot.voltage.to.date.time()`
 * `plot.sub.metering.to.date.time()` - pass FALSE to the second argument to not display the box around the legend
 * `plot.reactive.power.to.date.time()`
+ 
+`plot.voltage.to.date.time()` and `plot.reactive.power.to.date.time()` use the `plot()` function to plot the Voltage and Global Reactive Power against Date-Time respectively.
 
 ## Usage
 
@@ -53,45 +61,28 @@ All the plot*.R files must be in the same directory. In R, the user can then set
 
 ## Results
 
+These are the reference and submitted plots compared side by side. Note that the reference plots are 504x504 pixels, while the generated plots are 480x480 pixels.
+
 ### Plot 1
 
-#### Reference
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png)
-
-#### Submitted
-
-![plot1](plot1.png)
-
+| Reference | Submitted|
+| --- | --- |
+| ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) | ![plot1](plot1.png) |
 
 ### Plot 2
 
-#### Reference
-
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png)
-
-#### Submitted
-
-![plot2](plot2.png)
-
+| Reference | Submitted|
+| --- | --- |
+| ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) | ![plot2](plot2.png) |
 
 ### Plot 3
 
-#### Reference
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png)
-
-#### Submitted
-
-![plot3](plot3.png)
-
+| Reference | Submitted|
+| --- | --- |
+| ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) | ![plot3](plot3.png) |
 
 ### Plot 4
 
-#### Reference
-
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png)
-
-#### Submitted
-
-![plot4](plot4.png)
+| Reference | Submitted|
+| --- | --- |
+| ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) | ![plot4](plot4.png) |
