@@ -23,6 +23,7 @@ Contains functions that actually generate the plots. The developer decided to pu
 ### [plot1.R](plot1.R)
 
 Output: [plot1.png](plot1.png)
+
 Plot Function: `hist.global.active.power()` in [plot.functions.R](plot.functions.R)
 
 The `hist.global.active.power()` uses the `hist()` function on the Global Active Power data to generate the required plot.
@@ -30,6 +31,7 @@ The `hist.global.active.power()` uses the `hist()` function on the Global Active
 ### [plot2.R](plot2.R)
 
 Output: [plot2.png](plot2.png)
+
 Plot Function: `plot.active.power.to.date.time()` in [plot.functions.R](plot.functions.R)
 
 The `plot.active.power.to.date.time()` uses the `plot()` function on the Global Active Power data against the Date-Time to generate the required plot. The `plot.active.power.to.date.time()` has a second optional parameter that controls the Global Active Power label. This is used when generating [plot4.png](plot4.png), which uses the same plot.
@@ -37,6 +39,7 @@ The `plot.active.power.to.date.time()` uses the `plot()` function on the Global 
 ### [plot3.R](plot3.R)
 
 Output: [plot3.png](plot3.png)
+
 Plot Function: `plot.sub.metering.to.date.time()` in [plot.functions.R](plot.functions.R)
 
 The `plot.sub.metering.to.date.time()` first uses the `plot()` function on the Sub Metering 1 data against the Date-Time to generate the required plot, but passes the `type = 'n'` parameter to generate an empty plot. It then calls the `line()` function on each of the Sub Metering data while setting the appropriate color. It then generates a legend on the top right of the plot using the `legend()` function.
@@ -44,6 +47,7 @@ The `plot.sub.metering.to.date.time()` first uses the `plot()` function on the S
 ### [plot4.R](plot4.R)
  
 Output: [plot4.png](plot4.png)
+
 Plot Function: `multi.plot()` in [plot.functions.R](plot.functions.R)
 
 The function `multi.plot()` in turn calls the following functions also found in [plot.functions.R](plot.functions.R) to generate the plots:
