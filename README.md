@@ -67,7 +67,7 @@ All the plot*.R files must be in the same directory. In R, the user can then set
 
 ## Results
 
-These are the reference and submitted plots compared side by side. Note that the reference plots are 504x504 pixels, while the generated plots are 480x480 pixels.
+These are the reference and submitted plots compared side by side. Note that the reference plots are 504x504 pixels, while the submitted plots are 480x480 pixels as that is the requirement.
 
 ### Plot 1
 
